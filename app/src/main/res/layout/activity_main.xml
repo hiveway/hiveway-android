@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="org.hiveway.MainActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageButton
+            android:id="@+id/drawer_toggle"
+            style="?attr/image_button_style"
+            android:layout_width="?attr/actionBarSize"
+            android:layout_height="?attr/actionBarSize"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:background="?android:colorBackground"
+            android:contentDescription="@string/action_open_drawer"
+            app:layout_anchor="@id/pager"
+            app:layout_anchorGravity="top|left"
+            app:srcCompat="@drawable/ic_menu_24dp" />
+
+        <android.support.design.widget.TabLayout
+            android:id="@+id/tab_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="?attr/actionBarSize"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentTop="true"
+            android:layout_toEndOf="@id/drawer_toggle"
+            android:background="?android:colorBackground"
+            app:tabGravity="fill"
+            app:tabIndicatorHeight="3dp"
+            app:tabMaxWidth="0dp"
+            app:tabPaddingEnd="1dp"
+            app:tabPaddingStart="1dp"
+            app:tabPaddingTop="4dp"
+            app:tabTextAppearance="@style/TabLayoutTextStyle">
+
+            <android.support.design.widget.TabItem
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/title_home" />
+
+            <android.support.design.widget.TabItem
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/title_notifications" />
+
+            <android.support.design.widget.TabItem
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/title_public_local" />
+
+            <android.support.design.widget.TabItem
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/title_public_federated" />
+
+        </android.support.design.widget.TabLayout>
+
+        <android.support.v4.view.ViewPager
+            android:id="@+id/pager"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_below="@id/tab_layout" />
+
+    </RelativeLayout>
+
+    <View
+        android:id="@+id/tab_bottom_shadow"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="@drawable/material_drawer_shadow_bottom"
+        android:visibility="visible"
+        app:layout_anchor="@id/tab_layout"
+        app:layout_anchorGravity="bottom" />
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/floating_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:contentDescription="@string/action_compose"
+        app:layout_anchor="@id/pager"
+        app:layout_anchorGravity="bottom|end"
+        app:srcCompat="@drawable/ic_create_24dp" />
+
+    <FrameLayout
+        android:id="@+id/overlay_fragment_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    </FrameLayout>
+</android.support.design.widget.CoordinatorLayout>

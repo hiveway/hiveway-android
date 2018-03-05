@@ -1,5 +1,7 @@
 # Hiveway Android app
 
+Forked from Tusky (https://github.com/tuskyapp/Tusky) and rebranded for Hiveway.
+
 ## Features
 
 - Material Design

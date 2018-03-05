@@ -1,6 +1,6 @@
 # Hiveway Android app
 
-Forked from Tusky (https://github.com/tuskyapp/Tusky) and rebranded for Hiveway.
+Forked from Tusky (https://github.com/tuskyapp/Tusky) and rebranded for Hiveway for the initial release.
 
 ## Features
 

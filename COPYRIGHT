@@ -1,0 +1,9 @@
+The Hiveway Android Client source code is forked from Tusky (https://github.com/tuskyapp/Tusky)
+
+It currently has the following differences over Tusky:
+
+- Refactor tusky packages to hiveway
+- Change branding from tusky to hiveway
+- Make the default domain hiveway.net
+- Remove ability to work with multiple accounts
+- Make the Light theme the default theme

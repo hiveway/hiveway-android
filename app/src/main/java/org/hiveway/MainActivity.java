@@ -77,6 +77,7 @@ public class MainActivity extends BaseActivity implements ActionButtonActivity {
     private static final long DRAWER_ITEM_BLOCKED_USERS = 3;
     private static final long DRAWER_ITEM_SEARCH = 4;
     private static final long DRAWER_ITEM_PREFERENCES = 5;
+    private static final long DRAWER_ITEM_ABOUT = 6;
     private static final long DRAWER_ITEM_LOG_OUT = 7;
     private static final long DRAWER_ITEM_FOLLOW_REQUESTS = 8;
     private static final long DRAWER_ITEM_SAVED_POST = 9;
@@ -319,6 +320,7 @@ public class MainActivity extends BaseActivity implements ActionButtonActivity {
         listItem.add(new PrimaryDrawerItem().withIdentifier(DRAWER_ITEM_SAVED_POST).withName(getString(R.string.action_access_saved_post)).withSelectable(false).withIcon(GoogleMaterial.Icon.gmd_save));
         listItem.add(new DividerDrawerItem());
         listItem.add(new SecondaryDrawerItem().withIdentifier(DRAWER_ITEM_PREFERENCES).withName(getString(R.string.action_view_preferences)).withSelectable(false).withIcon(GoogleMaterial.Icon.gmd_settings));
+        listItem.add(new SecondaryDrawerItem().withIdentifier(DRAWER_ITEM_ABOUT).withName(getString(R.string.about_title_activity)).withSelectable(false).withIcon(GoogleMaterial.Icon.gmd_info));
         listItem.add(new SecondaryDrawerItem().withIdentifier(DRAWER_ITEM_LOG_OUT).withName(getString(R.string.action_logout)).withSelectable(false).withIcon(GoogleMaterial.Icon.gmd_exit_to_app));
 
         IDrawerItem[] array = new IDrawerItem[listItem.size()];
@@ -354,6 +356,9 @@ public class MainActivity extends BaseActivity implements ActionButtonActivity {
                             startActivity(intent);
                         } else if (drawerItemIdentifier == DRAWER_ITEM_PREFERENCES) {
                             Intent intent = new Intent(MainActivity.this, PreferencesActivity.class);
+                            startActivity(intent);
+                        } else if (drawerItemIdentifier == DRAWER_ITEM_ABOUT) {
+                            Intent intent = new Intent(MainActivity.this, AboutActivity.class);
                             startActivity(intent);
                         } else if (drawerItemIdentifier == DRAWER_ITEM_LOG_OUT) {
                             logout();

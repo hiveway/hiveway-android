@@ -45,6 +45,18 @@
                 android:textIsSelectable="true" />
 
             <TextView
+                android:id="@+id/projectURL_TV2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:autoLink="web"
+                android:lineSpacingMultiplier="1.2"
+                android:padding="@dimen/text_content_margin"
+                android:text="@string/about_tusky_src"
+                android:textAlignment="center"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                android:textIsSelectable="true" />
+
+            <TextView
                 android:id="@+id/projectURL_TV"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"

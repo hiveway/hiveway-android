@@ -223,8 +223,10 @@
     <string name="about_title_activity">About</string>
     <string name="about_tusky_version">Hiveway %s</string>
     <string name="about_tusky_license">Hiveway is free and open-source software.
-        It is licensed under the GNU General Public License Version 3.
+        It is forked from Tusky, which is licensed under the GNU General Public License Version 3.
         You can view the license here: https://www.gnu.org/licenses/gpl-3.0.en.html</string>
+    <string name="about_tusky_src">Tusky source available at:\n
+        https://github.com/tuskyapp/Tusky</string>
     <!-- note to translators: the url can be changed to link to the localized version of the license -->
     <string name="about_project_site">
         Project website:\n
@@ -277,5 +279,6 @@
     <string name="hint_describe_for_visually_impaired">Describe for visually impaired</string>
     <string name="action_set_caption">Set caption</string>
     <string name="action_remove_media">Remove</string>
+
 
 </resources>
